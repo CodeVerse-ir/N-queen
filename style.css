@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.solve {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+td {
+  user-select: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* td:hover {
+  background-color: rgba(255, 255, 0, 0.5);
+} */
+
+.black {
+  background-color: #333;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.queen {
+  color: orange;
+}

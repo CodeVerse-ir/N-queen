@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شطرنج</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%; height: auto; text-align: center; gap: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);"
+        dir="rtl">
+        <div style="display: flex; flex-direction: row; align-items: center; gap: 30px;">
+            <div style="margin: 20px;">
+                <label for="size" style="font-weight: bold;">تعداد خانه‌ها :</label>
+                <input type="number" id="size" value="4" min="4" max="20">
+            </div>
+            <div style="margin: 20px;">
+                <label for="draw_delay" style="font-weight: bold;">نمایش آهسته :</label>
+                <input type="checkbox" id="draw_delay" value="true">
+                <label for="delay_time" style="margin-right: 20px; font-weight: bold;">زمان نمایش :</label>
+                <input type="number" id="delay_time" value="100" min="100" max="1000">
+            </div>
+            <div style="margin: 20px;">
+                <label for="populationSize" style="font-weight: bold;">تعداد جمعیت اولیه :</label>
+                <input type="number" id="populationSize" value="100" min="100" max="1000">
+                <label for="generations" style="margin-right: 20px; font-weight: bold;">تعداد نسل‌ها :</label>
+                <input type="number" id="generations" value="1000" min="1000" max="10000">
+                <label for="mutation" style="margin-right: 20px; font-weight: bold;">جهش :</label>
+                <input type="number" id="mutation" value="0.05" min="0.01" max="1" step="0.01">
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div>
+                <button class="solve" id="btn_create" style="background-color: #4CAF50;">ایجاد
+                    صفحه</button>
+                <button class="solve" id="btn_DrawBoard" style="background-color: #2196F3;">چیدن
+                    وزیرها</button>
+            </div>
+            <div>
+                <button class="solve" id="btn_Hill_climbing" style="background-color: #FF9800; ">تپه
+                    نوردی</button>
+                <button class="solve" id="btn_genetic" style="background-color: #9C27B0; ">ژنتیک</button>
+                <button class="solve" id="btn_csp_ltr" style="margin-right: 50px; background-color: #3F51B5;">ارضای
+                    محدودیت (چپ به راست)</button>
+                <button class="solve" id="btn_csp_ttb" style="background-color: #E91E63;">ارضای
+                    محدودیت (بالا به پایین)</button>
+                <button class="solve" id="btn_csp_center" style="background-color: #673ab7;">ارضای
+                    محدودیت (مرکز)</button>
+            </div>
+        </div>
+
+        <div style="margin: 10px; align-items: start;">
+            <div id="initial" style="font-weight: bold; color: #333;"></div>
+            <div id="final" style="font-weight: bold; color: #333;"></div>
+        </div>
+    </div>
+
+    <div id="board-container"></div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
